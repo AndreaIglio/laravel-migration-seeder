@@ -59,9 +59,10 @@ class StudentController extends Controller
      * @param  \App\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function edit(Student $student)
+    public function edit($student)
     {
-        //
+        $student = Student::find($student);
+        return view('student.edit', compact('student'));
     }
 
     /**
@@ -71,9 +72,20 @@ class StudentController extends Controller
      * @param  \App\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Student $student)
+    public function update(Request $request, $student)
     {
-        //
+     $student = Student::find($student);
+
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'lastname' => 'required',
+            'yob' => 'required',
+        ]);
+        
+        $student->update($validatedData);
+       
+        return redirect()->route('student.index');
+
     }
 
     /**
