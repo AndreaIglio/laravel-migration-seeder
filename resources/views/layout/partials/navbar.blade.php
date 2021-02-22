@@ -12,7 +12,7 @@
                 <a href="{{ route('class_rooms.index')}}">Classes</a>
             </li>
             <li>
-                <a href="">Course</a>
+                <a href="{{ route('course.index') }}">Course</a>
             </li>
         </ul>
     </nav>
