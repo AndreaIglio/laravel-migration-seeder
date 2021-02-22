@@ -11,7 +11,7 @@
 @section('content')
 
 
-@foreach($courses as $course)
+    @foreach($courses as $course)
 
 
 <div class="card flex column">
@@ -22,6 +22,6 @@
 </div>
 
 
-@endforeach
+    @endforeach
 
 @endsection

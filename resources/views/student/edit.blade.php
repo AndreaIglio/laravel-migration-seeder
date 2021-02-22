@@ -27,13 +27,12 @@
     @enderror
 
 
-
     <label for="">Date of birth</label>
     <input type="date" name="yob" value="{{ $student->yob }}">
     @error('yob')
     <div class="alert alert-danger">{{ $message }}</div>
     @enderror
-
+    
 
     <button class="btn btn-dark">Edit</button>
 
