@@ -22,3 +22,4 @@ Route::resource('class_rooms', 'ClassRoomsController');
 Route::resource('course', 'CourseController');
 
 
+Route::get('students_api', 'StudentController')->name('students_api');
